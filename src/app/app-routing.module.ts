@@ -8,6 +8,7 @@ import { CrisisListComponent }   from './crisis-list.component';
 
 const appRoutes: Routes = [
     { path: 'crisis-center', component: CrisisListComponent },
+    // { path: 'signup', component: SignupComponent },
     { path: '',   redirectTo: '/questions', pathMatch: 'full' },
     { path: '**', component: PageNotFoundComponent }
 ];

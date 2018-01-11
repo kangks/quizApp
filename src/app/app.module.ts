@@ -7,10 +7,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { QuestionModule }     from './question/question.module';
+import { SignupModule }     from './auth/signup.module';
 
 import { PageNotFoundComponent }   from './not-found.component';
 import { CrisisListComponent }   from './crisis-list.component';
-import { TestComponent } from './test/test.component';
 
 
 
@@ -18,13 +18,13 @@ import { TestComponent } from './test/test.component';
   declarations: [
     AppComponent,
     CrisisListComponent,
-    PageNotFoundComponent,
-    TestComponent
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     QuestionModule,
+    SignupModule,
     AppRoutingModule,
   ],
   providers: [],

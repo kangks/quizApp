@@ -1,0 +1,49 @@
+<div class="">   
+
+    <h1>Sign Up</h1>   
+    <form>
+        <div class="top-row">
+          <div class="field-wrap">
+            <label>
+              First Name<span class="req">*</span>
+            </label>
+            <input type="text" name="firstname" required [(ngModel)]="user.firstname"/>
+          </div>
+      
+          <div class="field-wrap">
+            <label>
+              Last Name<span class="req">*</span>
+            </label>
+            <input type="text" required name="lastname" [(ngModel)]="user.lastname" />
+          </div>
+        </div>
+
+        <div class="field-wrap">
+          <label>
+            Email Address<span class="req">*</span>
+          </label>
+          <input type="email"required name="email" [(ngModel)]="user.email" />
+        </div>
+        
+        <div class="field-wrap">
+          <label>
+            Set A Password<span class="req">*</span>
+          </label>
+          <input type="password" required name="password" [(ngModel)]="user.password" />
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="userType" id="userType1" [value]="1" checked [(ngModel)]="user.userType">
+                I am a content creator
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="userType" id="userType2" [value]="2" [(ngModel)]="user.userType">
+                I am a content responder
+            </label>
+        </div>
+        <button type="submit" class="button button-block" (click)="getSignUpdata(user)">Get Started</button>    
+    </form>
+    
+</div> <!-- /form -->
