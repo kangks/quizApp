@@ -12,7 +12,7 @@ import { SignupModule }     from './auth/signup.module';
 import { PageNotFoundComponent }   from './not-found.component';
 import { CrisisListComponent }   from './crisis-list.component';
 
-
+import {CognitoUtil} from "./services/cognito.service";
 
 @NgModule({
   declarations: [
@@ -27,7 +27,9 @@ import { CrisisListComponent }   from './crisis-list.component';
     SignupModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [
+    CognitoUtil
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

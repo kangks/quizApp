@@ -2,9 +2,10 @@ import { NgModule }       from '@angular/core';
 import { CommonModule }   from '@angular/common';
 import { FormsModule }    from '@angular/forms';
 
-import { SignupComponent }    from './signup.component';
-
+import { RegisterComponent }    from './signup.component';
+import { UserRegistrationService } from './signup.service';
 import { SignupRoutingModule } from './auth-routing.module';
+import {RegistrationConfirmationComponent} from "./confirmRegistration.component";
 
 @NgModule({
   imports: [
@@ -13,8 +14,9 @@ import { SignupRoutingModule } from './auth-routing.module';
     SignupRoutingModule
   ],
   declarations: [
-    SignupComponent
+    RegistrationConfirmationComponent,
+    RegisterComponent
   ],
-  providers: [ ]
+  providers: [ UserRegistrationService ]
 })
 export class SignupModule {}
